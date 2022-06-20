@@ -1,24 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { Avatar } from "@mui/material";
+import ModalBox from "./Modal";
 
 function Post({ username, caption, ImageUrl }) {
 	return (
-		<Main>
-			<div className='post_header'>
-				<Avatar className='post_avatar' alt='miki' src={ImageUrl} />
-				<h3>{username}</h3>
-			</div>
-			{/* header -> avatar -> username */}
+		<div>
+			<Main>
+				<div className='post_header'>
+					<Avatar className='post_avatar' alt='miki' src={ImageUrl} />
+					<h3>{username}</h3>
+				</div>
 
-			{/* profile image */}
-			<img src={ImageUrl} alt='' className='post_image' />
+				<img src={ImageUrl} alt='' className='post_image' />
 
-			{/* username + caption */}
-			<h4 className='post_text'>
-				<strong>{username}</strong> {caption}
-			</h4>
-		</Main>
+				{/* username + caption */}
+				<h4 className='post_text'>
+					<strong>{username}</strong> {caption}
+				</h4>
+			</Main>
+		</div>
 	);
 }
 

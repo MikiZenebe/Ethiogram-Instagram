@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../img/logo.png";
+import ModalBox from "./Modal";
+import ModalSignIn from "./ModalSignIn";
 
 function Header() {
 	return (
-		<Main>
-			<div className='header'>
-				<h3 className='logo'>Ethiogram</h3>
-			</div>
-		</Main>
+		<div>
+			<Main>
+				<div className='header'>
+					<h3 className='logo'>Ethiogram</h3>
+				</div>
+			</Main>
+			<ModalBox /> <ModalSignIn />
+		</div>
 	);
 }
 
